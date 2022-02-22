@@ -27,24 +27,24 @@ function Dashboard() {
 
  
     return (<>
-      <div className="col-md-7 mx-auto col-12 card shadow-lg border-0 p-4">
+      <div className="col-md-7 mx-auto col-8 card shadow-lg border-0 p-4">
            <h4 className="fw-bold p-4 text-secondary header">WELCOME BACK</h4>
-        <h6 className="fw-bold p-4 name">{Firstname}</h6>
-        <div className='container mt-3'>
-        <div className='row'>
+        <h6 className="fw-bold  name">{Firstname}</h6>
+        <div className='container ' >
+        <div className='row' style={{marginBottom:350, marginLeft:250}}>
         {
           Object.keys(hotels).map((id,items)=>
           
           
-            <div className='col-md-4'>
-              <div className='card shadow-lg'>
+            <div className='col-md-6  row align-items-center' >
+              <div className='card shadow-md '>
                 <img src={hotels[id].url}/>
-                <div className='card-body'>
+                <div className='card-body row align-items-center'>
                   <h3>{hotels[id].name}</h3>
                 <Link to={`/update/${id}`}>
-                                <button className="btn btn-info">Update</button>
+                                <button className="btn btn-info" style={{borderRadius:10}}>Update</button>
                                    </Link>
-                  <button className='btn btn-dark btn-sm'>Edit</button>
+                  {/* <button className='btn btn-dark btn-sm'>Edit</button> */}
                 </div>
 
               </div>
